@@ -37,7 +37,7 @@ s = z3.Solver()
 
 for v in sys.argv[2:]:          # usage xo256.py func seq1 seq2 seq3 ...
     s.add(scramble(x, func, z3.LShR) == int(v, 0))
-    xoshiro256(x)
+    xoshiro256(x, z3.LShR)
 
 for i in xrange(1, sys.maxint):
     print '\n#%d = %s' % (i, s.check())
