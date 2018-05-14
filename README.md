@@ -18,8 +18,8 @@ seed = 0x0000000000000abc,000000000000abcd,00000000000abcde,0000000000abcdef 
 #2 = unsat    
 ```
 Doing the same with xoshiro256+  
-Solving xoshiro256+ seed is harder (cannot use z3.SimpleSolver)  
-Take WAY too long to prove seed uniqueness ...  
+Solving xoshiro256+ seed is MUCH HARDER  
+And you can forget about proving UNIQUENESS ...
 ```
 > xo256.py + 0xabd8ab 0x6cc4400000ab6cb3 0xb07b8d9888a17125 0x685d5610c943f25c  
 #1 = sat  
