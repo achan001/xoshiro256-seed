@@ -33,7 +33,7 @@ if sys.argv[2] == 'seed':       # usage xo256.py func seed x0 x1 x2 x3
 
 x0, x1, x2, x3 = z3.BitVecs('x0 x1 x2 x3', 64)
 x = [x0, x1, x2, x3]            # mutable state, allow update
-s = z3.Solver()
+s = z3.SimpleSolver()
 
 for v in sys.argv[2:]:          # usage xo256.py func seq1 seq2 seq3 ...
     s.add(scramble(x, func, z3.LShR) == int(v, 0))
